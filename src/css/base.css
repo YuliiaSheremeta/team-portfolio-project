@@ -43,35 +43,4 @@ body {
     padding-bottom: 82px;
   }
 }
-.title-first{
 
-  font-size: 50px;
-  line-height: 50px;
-  letter-spacing: -0.03em;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-}
-.title-second{
-
-
-  font-size: 24px;
-  line-height: 28px;
-  letter-spacing: -0.03em;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-}
-
-
-@media screen and (min-width: 768px) {
-  .title-first {
-    font-size: 90px;
-    line-height: 90px;
-  }
-  .title-second{
-      font-size: 38px;
-      line-height: 40px;
-      
-  }
-}
