@@ -1,23 +1,13 @@
-:root {
-  /* font-family: Inter, Avenir, Helvetica, Arial, sans-serif; */
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+body {
+  font-family: "Inter Tight", serif;
+  background-color: #1C1D20;
+  color: #FAFAFA;
+  font-weight: 500;
   font-size: 16px;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color: #242424;
- /* background-color: ;*/
-
+  line-height: 24px;
   
 }
-
-@media screen and (min-width: 768px) {
-  body {
-    font-size: 16px;
-    line-height: 1.25;
-  }
-}
+ 
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -37,13 +27,51 @@
   pointer-events: auto;
 }
 .section {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 @media screen and (min-width: 768px) {
   .section {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 47px;
+    padding-bottom: 47px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .section {
+    padding-top: 82px;
+    padding-bottom: 82px;
+  }
+}
+.title-first{
+
+  font-size: 50px;
+  line-height: 50px;
+  letter-spacing: -0.03em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.title-second{
+
+
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.03em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+
+@media screen and (min-width: 768px) {
+  .title-first {
+    font-size: 90px;
+    line-height: 90px;
+  }
+  .title-second{
+      font-size: 38px;
+      line-height: 40px;
+      
   }
 }
