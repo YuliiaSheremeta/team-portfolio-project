@@ -40,6 +40,9 @@
     }
 }
 
+html{
+    scroll-behavior: smooth;
+}
 /* ================================ /Container ================================ */
 
 /* ================================ Title styles ================================ */
@@ -88,17 +91,26 @@
     width: 44px;
     height: 44px;
 
-    border-radius: 8px;
-
-    background-image: url('../img/aboutme/aboutmedeck@2x.webp');
+    background-image: url('../img/header/fotoheader.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
+@media screen and (min-resolution:192dpi){
+    .footer-title::before{
+        background-image: url('../img/header/fotoheader@2x.webp');
+    }
+}
+
 @media screen and (min-width: 768px) {
     .footer-title {
         gap: 20px;
+    }
+
+    .footer-title::before{
+        width: 70px;
+        height: 70px;
     }
 }
 
