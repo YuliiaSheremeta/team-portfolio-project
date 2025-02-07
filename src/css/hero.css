@@ -24,7 +24,7 @@
 .hero-social-item:hover,
 .hero-social-item:focus {
   box-shadow: 0px 0px 20px 7px rgba(255, 255, 255, 0.6);
-  border-radius: 50%;
+  border-radius: 28px;
   transform: scale(1.1);
 
 }
@@ -86,6 +86,19 @@
   max-width: 375px;
 }
 
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
 .hero-title {
   font-size: 50px;
   font-weight: 500;
@@ -95,7 +108,11 @@
   margin-bottom: 162px;
   margin-top: 281px;
   max-width: 342px;
+  animation: fadeInScale 1s ease-in-out;
+
 }
+
+
 
 /* ?=========mobile========== */
 
