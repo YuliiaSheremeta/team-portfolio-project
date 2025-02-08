@@ -42,6 +42,7 @@
 
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 /* ================================ /Container ================================ */
 
@@ -78,6 +79,8 @@ html{
     letter-spacing: -0.03em;
     text-transform: uppercase;
     color: #fafafa;
+
+    transition: transform 250ms linear;
 }
 
 .footer-title-accent {
@@ -91,11 +94,29 @@ html{
     width: 44px;
     height: 44px;
 
+    border-radius: 15px;
     background-image: url('../img/header/fotoheader.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+
+    transition: transform 250ms linear, box-shadow 250ms linear;
 }
+
+.footer-title:hover::before{
+    transform: rotateX(10deg) rotateY(10deg) rotateZ(-5deg) scale(1.1);
+    box-shadow: 3px 3px 0px #969696,
+            -3px -3px 0px #ffffff;
+}
+
+.animate-title{
+    transform: rotateX(10deg) rotateY(10deg) rotateZ(-2deg) scale(1.1);
+
+    text-shadow: -1px 1px 0 rgb(213, 213, 213), -2px 2px 0 rgb(170, 170, 170), -3px 3px 0 rgb(128, 128, 128), -4px 4px 0 rgb(85, 85, 85), -5px 5px 0 rgb(43, 43, 43), -6px 6px 1px rgba(0, 0, 0, 1);
+    -webkit-text-shadow: -1px 1px 0 rgb(213, 213, 213), -2px 2px 0 rgb(170, 170, 170), -3px 3px 0 rgb(128, 128, 128), -4px 4px 0 rgb(85, 85, 85), -5px 5px 0 rgb(43, 43, 43), -6px 6px 1px rgba(0, 0, 0, 1);
+    -moz-text-shadow: -1px 1px 0 rgb(213, 213, 213), -2px 2px 0 rgb(170, 170, 170), -3px 3px 0 rgb(128, 128, 128), -4px 4px 0 rgb(85, 85, 85), -5px 5px 0 rgb(43, 43, 43), -6px 6px 1px rgba(0, 0, 0, 1);
+}
+
 
 @media screen and (min-resolution:192dpi){
     .footer-title::before{
