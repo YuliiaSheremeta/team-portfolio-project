@@ -37,33 +37,3 @@ const menuItems = document.querySelectorAll('.tablet-menu-item');
 menuItems.forEach(function (item) {
   item.addEventListener('click', toggleMenu);
 });
-
-//=====modal=======//
-// modal window open - close //
-const formFooterButton = document.querySelector('.footer-button-submit');
-const modalWindow = document.querySelector('.modal-window');
-const modalWindowClose = document.querySelector('.modal-close');
-
-export function addClassIsOpenModal() {
-  return modalWindow.classList.add('is-open');
-}
-function deleteClassIsOpenModal() {
-  return modalWindow.classList.remove('is-open');
-}
-
-formFooterButton.addEventListener('click', addClassIsOpenModal);
-modalWindowClose.addEventListener('click', deleteClassIsOpenModal);
-
-document.addEventListener('keydown', event => {
-  if (event.key === 'Escape') {
-    return modalWindow.classList.remove('is-open');
-  }
-});
-
-modalWindow.addEventListener('click', event => {
-  const clickedElement = event.target;
-  if (clickedElement !== modalWindow) {
-    return;
-  }
-  return modalWindow.classList.remove('is-open');
-});
