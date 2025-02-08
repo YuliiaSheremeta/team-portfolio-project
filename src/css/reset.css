@@ -18,6 +18,7 @@ a {
   color: currentColor;
   text-decoration: none;
   font-style: normal;
+  -webkit-tap-highlight-color: transparent;
 }
 
 button {
