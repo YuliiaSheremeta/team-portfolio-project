@@ -58,14 +58,14 @@
   display: none;
   background-color: #ed3b44;
   font-weight: 500;
-  line-height: 1.5;
+  font-size: 13px;
   letter-spacing: 0.04em;
   text-align: center;
   align-items: flex-start;
   gap: 10px;
   margin: 0 auto;
   min-width: 164px;
-  height: 45px;
+  padding: 14px 32px;
   border: none;
   border-radius: 50px;
   cursor: pointer;
@@ -86,9 +86,8 @@
 
 .btn-scroll-mobile {
   display: block;
-  padding-top: 10px;
-  margin-top: 282px;
-  margin-bottom: 64px;
+  position: absolute;
+  bottom: 64px;
 }
 
 .header-btn-mobile {
@@ -196,7 +195,6 @@
   justify-content: center;
   gap: 18px;
   margin: auto;
-  padding-top: 300px;
 }
 
 .header-photo {
@@ -247,7 +245,6 @@
 .tablet-menu-link:focus {
   color: #ED3B44;
   cursor: pointer;
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
   transform: translateY(-2px);
 }
 
