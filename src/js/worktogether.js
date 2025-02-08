@@ -5,6 +5,8 @@ import axios from "axios";
 const formEl = document.querySelector('.footer-form');
 const emailInputEl = document.querySelector('.email-input');
 const textInputEl = document.querySelector('.comment-input');
+const footerTitleEl = document.querySelector('.footer-title');
+const contactListEl = document.querySelector('.footer-contact-list');
 
 const modalBackdropEl = document.querySelector('.backdrop');
 const modalCloseBtnEl = document.querySelector('.close-modal-button');
@@ -57,3 +59,19 @@ document.addEventListener('keydown', event => {
         modalBackdropEl.classList.remove('is-open');
     }
 });
+
+emailInputEl.addEventListener('focus', event => {
+    footerTitleEl.classList.add('animate-title');
+})
+
+emailInputEl.addEventListener('blur', event => {
+    footerTitleEl.classList.remove('animate-title');
+})
+
+textInputEl.addEventListener('focus', event => {
+    footerTitleEl.classList.add('animate-title');
+})
+
+textInputEl.addEventListener('blur', event => {
+    footerTitleEl.classList.remove('animate-title');
+})
