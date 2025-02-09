@@ -1,11 +1,11 @@
 @import url('swiper/css');
 
-.projects-section { 
+.projects-container { 
     padding-left: 16px;
     padding-right: 16px;
 }
 
-.projects-title {
+.projects-container .projects-title {
     font-weight: 600;
     font-size: 16px;
     line-height: 1.5;
@@ -15,18 +15,18 @@
     margin-bottom: 32px;
 }
 
-.swiper-wrapper {
+.projects-container .swiper-wrapper {
     display: flex;
 }
 
-.swiper-slide {
+.projects-container .swiper-slide {
     border-radius: 24px;
     width: 343px;
     height: 812px;
     background: #fafafa;
 }
 
-.projects-tags {
+.projects-container .projects-tags {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -40,7 +40,7 @@
     margin-bottom: 96px;
 }
 
-.projects-list-link {
+.projects-container .projects-list-link {
     font-weight: 500;
     font-size: 16px;
     letter-spacing: -0.02em;
@@ -56,7 +56,7 @@
     height: 45px;
 }
 
-.projects-paragraph {
+.projects-container .projects-paragraph {
     font-weight: 500;
     font-size: 24px;
     line-height: 1.16667;
@@ -69,7 +69,7 @@
 
 }
 
-.projects-button {
+.projects-container .projects-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -89,18 +89,18 @@
     margin-left: 32px;
 }
 
-.projects-image-wrapper {
+.projects-container .projects-image-wrapper {
     border-radius: 0 0 24px 24px;
     border: none;
     height: 50%;
     background: #242527;
 }
 
-.projects-image {
+.projects-container .projects-image {
     padding: 100px 16px;
 }
 
-.projects-swiper-buttons {
+.projects-container .projects-swiper-buttons {
     display: flex;
     justify-content: center;
     gap: 16px;
@@ -109,7 +109,7 @@
     margin-top: 32px;
 }
 
-.projects-swiper-button-prev { 
+.projects-container .projects-swiper-button-prev { 
 border: 1px solid rgba(250, 250, 250, 0.5);
     border-radius: 60px;
     padding: 18px;
@@ -123,7 +123,7 @@ background-color: transparent;
 }
 
 
-.projects-swiper-button-next {
+.projects-container .projects-swiper-button-next {
     border: 1px solid rgba(250, 250, 250, 0.5);
     border-radius: 60px;
     padding: 18px;
@@ -135,7 +135,7 @@ background-color: transparent;
     background-color: transparent;
 }
 
-.projects-swiper-button-disabled {
+.projects-container .projects-swiper-button-disabled {
     opacity: 0.5;
     pointer-events: none;
 }
@@ -145,17 +145,17 @@ background-color: transparent;
 
 @media screen and (min-width: 768px) {
 
-    .projects-section { 
+    .projects-container { 
         padding-left: 32px;
         padding-right: 32px;
     }
 
-    .swiper-slide {
+    .projects-container .swiper-slide {
         width: 704px;
         height: 1191px;
     }
 
-    .projects-tags {
+    .projects-container .projects-tags {
         width: 312px;
         height: 55px;
         flex-wrap: nowrap;
@@ -165,7 +165,7 @@ background-color: transparent;
 
     }
 
-    .projects-paragraph {
+    .projects-container .projects-paragraph {
         margin-bottom: 32px;
         margin-left: 64px;
         font-weight: 500;
@@ -177,21 +177,21 @@ background-color: transparent;
         height: 132px;
     }
 
-    .projects-button {
+    .projects-container .projects-button {
         margin-left: 64px;
         margin-bottom: 64px;
     }
 
-    .projects-image-wrapper {
+    .projects-container .projects-image-wrapper {
         width: 100%;
         height: 55%;
     }
 
-    .projects-image {
+    .projects-container .projects-image {
         padding: 120px 45px;
     }
 
-    .swiper-buttons { 
+    .projects-container .swiper-buttons { 
         margin-top: 64px;
     }
 
@@ -199,14 +199,14 @@ background-color: transparent;
 
 @media screen and (min-width: 1440px) {
 
-    .swiper-wrapper {
+    .projects-container .swiper-wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
          
     }
 
-         .projects-content {
+    .projects-container .projects-content {
              display: flex;
              flex-direction: column;
              align-items: flex-start;
@@ -214,7 +214,7 @@ background-color: transparent;
              max-width: 50%;
          }
 
-    .swiper-slide {
+    .projects-container .swiper-slide {
         border-radius: 24px;
         width: 1376px;
         height: 625px;
@@ -223,7 +223,7 @@ background-color: transparent;
         align-items: center;
     }
 
-    .projects-image-wrapper {
+     .projects-container .projects-image-wrapper {
         border-radius: 0 24px 24px 0;
         height: 100%;
         width: 50%;
@@ -232,7 +232,7 @@ background-color: transparent;
         align-items: center;
     }
     
-    .projects-image { 
+    .projects-container .projects-image { 
         padding: 0;
     }
 
