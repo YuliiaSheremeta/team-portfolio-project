@@ -253,7 +253,7 @@
   list-style: none;
 }
 
-.about-me-swipper-div .swiper-button-next {
+.about-me-swipper-div .about-swiper-button-next {
   position: absolute;
   top: 50%;
   right: 16px;
@@ -269,18 +269,18 @@
 }
 
 @media screen and (min-width: 768px) {
-  .about-me-swipper-div .swiper-button-next {
+  .about-me-swipper-div .about-swiper-button-next {
     right: 32px;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .about-me-swipper-div .swiper-button-next {
+  .about-me-swipper-div .about-swiper-button-next {
     right: 64px;
   }
 }
 
-.about-me-swipper-div .swipper-button {
+.about-me-swipper-div .about-swipper-button {
   all: unset;
   background-color: transparent;
 }
@@ -370,7 +370,7 @@
   border: none;
 }
 
-.about-me-swipper-div .swipper-svg {
+.about-me-swipper-div .about-swipper-svg {
   stroke-width: 2px;
   stroke: #3b3b3b;
   fill: none;

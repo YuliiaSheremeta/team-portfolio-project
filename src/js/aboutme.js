@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
       },
     },
     navigation: {
-      nextEl: '.swiper-button-next',
+      nextEl: '.about-swiper-button-next',
     },
     keyboard: {
       enabled: true,
