@@ -1,10 +1,8 @@
 import Swiper from 'swiper';
 
-import { Navigation, Keyboard} from 'swiper/modules';
-
 const swiper = new Swiper('.swiper', {
-    modules: [Navigation, Keyboard], 
     loop: false, 
+    slidesPerView: 1,
     navigation: {
         nextEl: '.projects-swiper-button-next',
         prevEl: '.projects-swiper-button-prev',
@@ -12,9 +10,8 @@ const swiper = new Swiper('.swiper', {
     keyboard: {
         enabled: true,
         onlyInViewport: true,
-        pageUpDown: true,
     },
-    grabCursor: true, 
+    grabCursor: true,
     on: {
         init: function (swiper) {
             updateButtons(swiper);
