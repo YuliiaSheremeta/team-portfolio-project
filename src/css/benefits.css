@@ -8,6 +8,8 @@
   justify-content: flex-start;
   font-family: 'InterTight-SemiBold', sans-serif;
   letter-spacing: -0.02em;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .benefits-title {
@@ -26,6 +28,7 @@
   gap: 32px;
   align-items: flex-start;
   justify-content: flex-start;
+ 
 }
 
 .list-benefits {
@@ -131,8 +134,13 @@
   .section-benefits-content {
     gap: 64px;
     width: 704px;
+    
   }
-
+    .benefits{
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+  
   .list-benefits {
     flex-direction: row;
     flex-wrap: wrap;
@@ -146,5 +154,6 @@
     max-width: 1440px;
     flex-direction: row;
     justify-content: space-between;
+    
   }
 }
