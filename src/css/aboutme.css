@@ -101,26 +101,26 @@
 
 /* Accordion */
 
-.accordion-container {
+.about-me-accordion-container {
   padding: 0 16px;
 }
 
 @media screen and (min-width: 768px) {
-  .accordion-container {
+  .about-me-accordion-container {
     padding: 0 32px;
   }
 }
 
-.accordion-container .ac .ac-panel {
+.about-me-accordion-container .ac .ac-panel {
   overflow: hidden;
   transition-property: height, visibility;
   transition-timing-function: ease;
 }
-.accordion-container .is-active .ac-panel {
+.about-me-accordion-container .is-active .ac-panel {
   display: block;
 }
 
-.accordion-container .ac-header {
+.about-me-accordion-container .ac-header {
   font-weight: 600;
   font-size: 16px;
   line-height: 150%;
@@ -129,7 +129,7 @@
   color: rgba(250, 250, 250, 0.4);
 }
 
-.accordion-container .ac-div-space-beetwen {
+.about-me-accordion-container .ac-div-space-beetwen {
   display: flex;
   justify-content: space-between;
   max-width: 343px;
@@ -137,19 +137,19 @@
 }
 
 @media screen and (min-width: 768px) {
-  .accordion-container .ac-div-space-beetwen {
+  .about-me-accordion-container .ac-div-space-beetwen {
     max-width: 704px;
     padding-bottom: 8px;
   }
 }
 @media screen and (min-width: 1440px) {
-  .accordion-container .ac-div-space-beetwen {
+  .about-me-accordion-container .ac-div-space-beetwen {
     max-width: 1376px;
     padding-bottom: 8px;
   }
 }
 
-.accordion-container .about-trigger {
+.about-me-accordion-container .about-trigger {
   display: flex;
   justify-content: space-between;
   justify-content: center;
@@ -163,35 +163,35 @@
   height: 36px;
   transition: transform 0.4s ease;
 }
-.accordion-container .ac-panel {
+.about-me-accordion-container .ac-panel {
   margin-bottom: 20px;
 }
 @media screen and (min-width: 1440px) {
-  .accordion-container .ac-panel {
+  .about-me-accordion-container .ac-panel {
     margin-bottom: 0;
     margin: 8px 68px 32px 696px;
   }
 }
-.accordion-container .ac-accent-about-me {
+.about-me-accordion-container .ac-accent-about-me {
   padding-bottom: 32px;
 }
 
 @media screen and (min-width: 768px) {
-  .accordion-container .ac-accent-about-me {
+  .about-me-accordion-container .ac-accent-about-me {
     padding-bottom: 16px;
   }
 }
 @media screen and (min-width: 1440px) {
-  .accordion-container .ac-accent-about-me {
+  .about-me-accordion-container .ac-accent-about-me {
     padding-bottom: 32px;
   }
 }
-.accordion-container .about-me-svgbutton-arrow {
+.about-me-accordion-container .about-me-svgbutton-arrow {
   transform: rotate(0deg);
   transition: transform 0.7s ease;
 }
 
-.accordion-container .ac-text {
+.about-me-accordion-container .ac-text {
   font-family: 'Inter Tight', serif;
   font-weight: 500;
   font-size: 16px;
@@ -202,12 +202,12 @@
 }
 
 @media screen and (min-width: 768px) {
-  .accordion-container .ac-text {
+  .about-me-accordion-container .ac-text {
     width: 704px;
   }
 }
 @media screen and (min-width: 1440px) {
-  .accordion-container .ac-text {
+  .about-me-accordion-container .ac-text {
     width: 612px;
   }
 }
@@ -236,11 +236,11 @@
   }
 }
 
-.accordion-container .ac-acent {
+.about-me-accordion-container .ac-acent {
   padding-bottom: 10px;
 }
 
-.accordion-container .ac-width {
+.about-me-accordion-container .ac-width {
   width: 465px;
 }
 
