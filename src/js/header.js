@@ -7,6 +7,7 @@ if (burgerButton && closeButton && mobileMenuWrapper) {
   burgerButton.addEventListener('click', toggleMobileMenu);
   closeButton.addEventListener('click', toggleMobileMenu);
   mobileMenuContainer.addEventListener('click', toggleMobileMenu);
+  document.addEventListener('keydown', handleKeydown);
 }
 
 function toggleMobileMenu(e) {
@@ -15,6 +16,14 @@ function toggleMobileMenu(e) {
     mobileMenuWrapper.classList.remove('is-open');
   } else {
     mobileMenuWrapper.classList.add('is-open');
+  }
+}
+function handleKeydown(e) {
+  // Перевіряємо, чи натиснута клавіша 'Esc'
+  if (e.key === 'Escape') {
+    if (mobileMenuWrapper.classList.contains('is-open')) {
+      mobileMenuWrapper.classList.remove('is-open');
+    }
   }
 }
 
