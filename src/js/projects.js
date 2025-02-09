@@ -6,8 +6,8 @@ const swiper = new Swiper('.swiper', {
     modules: [Navigation, Keyboard], 
     loop: false, 
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.projects-swiper-button-next',
+        prevEl: '.projects-swiper-button-prev',
     },
     keyboard: {
         enabled: true,
@@ -25,17 +25,17 @@ const swiper = new Swiper('.swiper', {
     }
 });
 
-function updateButtons() {
-    const prevButton = document.querySelector('.swiper-button-prev');
-    const nextButton = document.querySelector('.swiper-button-next');
+function updateButtons(swiper) {
+    const prevButton = document.querySelector('.projects-swiper-button-prev');
+    const nextButton = document.querySelector('.projects-swiper-button-next');
 
      if (!prevButton || !nextButton) return;
   
     prevButton.disabled = swiper.isBeginning;
     nextButton.disabled = swiper.isEnd; 
 
-    prevButton.classList.toggle('swiper-button-disabled', swiper.isBeginning);
-    nextButton.classList.toggle('swiper-button-disabled', swiper.isEnd);
+    prevButton.classList.toggle('projects-swiper-button-disabled', swiper.isBeginning);
+    nextButton.classList.toggle('projects-swiper-button-disabled', swiper.isEnd);
     
 }
 
