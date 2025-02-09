@@ -1,6 +1,12 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
+// import Swiper from 'swiper';
+// import { Navigation, Keyboard } from 'swiper/modules';
+
+import Swiper from 'swiper/bundle';
+import 'swiper/swiper-bundle.css';
+
 document.addEventListener('DOMContentLoaded', () => {
   const swiperContainer = document.querySelector('.swiper-container');
 
@@ -51,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <div class="swiper-buttons">
               <div class="swiper-button-prev">
                 <svg class="swiper-button-icon">
-                  <use href="./img/sprite.svg#icon-swiperleft"></use>
+                  <use href="./img/sprite.svg#icon-swiperrigth"></use>
                 </svg>
               </div>
               <div class="swiper-button-next">

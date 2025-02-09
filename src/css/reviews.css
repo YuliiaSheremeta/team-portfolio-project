@@ -1,3 +1,5 @@
+/* @import url('swiper/css'); */
+
 .reviews {
   display: flex;
   align-items: flex-start;
@@ -93,6 +95,10 @@
   padding: 18px;
   width: 68px !important;
   height: 68px !important;
+}
+
+.swiper-button-prev {
+  transform: rotate(-180deg);
 }
 
 .swiper-button-prev::after,
