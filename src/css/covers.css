@@ -1,54 +1,94 @@
-/* body {
-  margin: 0;
-} */
+.covers-container {
+  max-width: 375px;
 
-/* *,
-*::before,
-*::after {
-  box-sizing: border-box;
-} */
+  margin: 0 auto;
+
+  background-color: rgba(217, 217, 217, 0.04);
+  backdrop-filter: blur(30px);
+  background-image: url(../img/covers/elemvectors.webp);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+@media screen and (min-resolution: 192dpi) {
+  .covers-section {
+    background-image: url(../img/covers/elemvectors.webp);
+  }
+}
 
 .content {
   position: relative;
+
+  margin: 0 auto;
+
+  max-height: 508px;
+  overflow: hidden;
 }
 .marquee {
-  position: absolute;
-  right: -800px;
-  left: 0;
-  overflow: hidden;
-  font-family: 'Pridi', sans-serif;
-  font-weight: 600;
-  font-size: 34px;
-  text-transform: uppercase;
-}
-
-.marquee__inner {
-  height: 100vh;
   display: flex;
-  transform: rotate(16deg);
+
+  user-select: none;
+  gap: 32px;
+  height: 100%;
+
+  padding-top: 22px;
+  padding-bottom: 22px;
+
+  transform: rotate(16deg) translateY(-50%);
 }
 
 .marquee__line {
-  background-color: #ffdc00;
   flex-shrink: 0;
-  margin-right: 10px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: calc(100% / 8);
-  white-space: nowrap;
-  animation-name: marqueeLine;
-  animation-duration: 5s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
+  justify-content: space-between;
+  gap: 32px;
+  min-width: 100%;
+  animation: scroll 15s linear infinite;
 }
 
-@keyframes marqueeLine {
+.marquee__img {
+  max-height: 162px;
+  width: auto;
+}
+
+@keyframes scroll {
   from {
-    transform: translateX(-20%);
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 32px));
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .covers-container {
+    max-width: 768px;
+  }
+  .content {
+    max-width: 768px;
+    max-height: 960px;
   }
 
-  to {
-    transform: translateX(-180%);
+  .marquee {
+    gap: 42px;
+    padding-top: 34px;
+    padding-bottom: 34px;
+  }
+  .marquee__line {
+    gap: 42px;
+  }
+
+  .marquee__img {
+    max-height: 314px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .covers-container {
+    max-width: 1440px;
+  }
+  .content {
+    max-width: 1440px;
   }
 }
