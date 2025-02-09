@@ -8,7 +8,7 @@ import Swiper from 'swiper/bundle';
 import 'swiper/swiper-bundle.css';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const swiperContainer = document.querySelector('.reviews-swiper-container');
+  const swiperContainer = document.querySelector('.swiper-container');
 
   const showError = error => {
     iziToast.error({
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
               </div>
             </div>`;
 
-      let reviewsSwiper = new Swiper('.reviews .swiper', {
+      let swiper = new Swiper('.swiper', {
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
@@ -86,8 +86,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (window.matchMedia('(min-width: 768px)').matches) slides = 2;
         if (window.matchMedia('(min-width: 1440px)').matches) slides = 4;
 
-        reviewsSwiper.params.slidesPerView = slides;
-        reviewsSwiper.update();
+        swiper.params.slidesPerView = slides;
+        swiper.update();
       }
 
       window.addEventListener('resize', updateSwiper);
