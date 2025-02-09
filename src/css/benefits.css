@@ -45,8 +45,8 @@
   gap: 64px;
   align-items: flex-start;
   justify-content: flex-start;
-  /* height: 270px; */
-  width: 344px;
+  min-width: 320px;
+  max-width: 344px;
 }
 
 .list-benefits-element-svg {
@@ -109,6 +109,14 @@
   border-color: rgba(250, 250, 250, 0.2);
   border-width: 1px;
   padding: 18px 36px;
+}
+
+.reference-order-the-project:hover {
+  transform: translateY(-2px);
+}
+
+.reference-order-the-project:hover a {
+  color: rgba(250, 250, 250, 0.8);
 }
 
 .go-to-order-the-project {
