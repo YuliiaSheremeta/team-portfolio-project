@@ -4,11 +4,20 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 64px;
+  margin-bottom: 32px;
+  padding: 0;
 }
+
+@media screen and (min-width: 768px) {
+  .about-me-general-div {
+    margin-bottom: 64px;
+  }
+}
+
 @media screen and (min-width: 1440px) {
   .about-me-general-div {
     flex-direction: row;
+    margin-bottom: 96px;
   }
 }
 
@@ -124,16 +133,19 @@
   display: flex;
   justify-content: space-between;
   max-width: 343px;
+  padding-bottom: 12px;
 }
 
 @media screen and (min-width: 768px) {
   .accordion-container .ac-div-space-beetwen {
     max-width: 704px;
+    padding-bottom: 8px;
   }
 }
 @media screen and (min-width: 1440px) {
   .accordion-container .ac-div-space-beetwen {
     max-width: 1376px;
+    padding-bottom: 8px;
   }
 }
 
@@ -244,7 +256,7 @@
 .about-me-swipper-div .swiper-button-next {
   position: absolute;
   top: 50%;
-  right: 0;
+  right: 16px;
   transform: translateY(-50%);
   z-index: 10;
   width: 40px;
@@ -254,6 +266,12 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .about-me-swipper-div .swiper-button-next {
+    right: 32px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -269,17 +287,20 @@
 .about-me-swipper-div {
   position: relative;
   padding: 0;
-  margin-top: 64px;
+  margin-top: 32px;
+  padding: 0 16px;
 }
 
 @media screen and (min-width: 768px) {
   .about-me-swipper-div {
+    margin-top: 64px;
     padding: 0 32px;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .about-me-swipper-div {
+    margin-top: 96px;
     padding: 0 64px;
   }
 }
