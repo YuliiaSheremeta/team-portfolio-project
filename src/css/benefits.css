@@ -28,7 +28,6 @@
   gap: 32px;
   align-items: flex-start;
   justify-content: flex-start;
- 
 }
 
 .list-benefits {
@@ -48,7 +47,6 @@
   gap: 64px;
   align-items: flex-start;
   justify-content: flex-start;
-  min-width: 320px;
   max-width: 344px;
 }
 
@@ -134,13 +132,12 @@
   .section-benefits-content {
     gap: 64px;
     width: 704px;
-    
   }
-    .benefits{
-      padding-left: 32px;
-      padding-right: 32px;
-    }
-  
+  .benefits {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
   .list-benefits {
     flex-direction: row;
     flex-wrap: wrap;
@@ -154,6 +151,5 @@
     max-width: 1440px;
     flex-direction: row;
     justify-content: space-between;
-    
   }
 }
