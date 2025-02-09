@@ -32,9 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(data => {
       if (data.length === 0) {
         throw new Error('Failed to fetch reviews');
-
-        // swiperContainer.innerHTML = "<p class='not-found'>Not found</p>";
-        // return;
       }
 
       swiperContainer.innerHTML = `
