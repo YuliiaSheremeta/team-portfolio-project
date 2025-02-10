@@ -23,6 +23,9 @@ const isValid = email => {
 //* Function
 const onFormSubmit = async event => {
     event.preventDefault();
+    modalCloseBtnEl.removeEventListener('click', onCloseBtnClick);
+    modalBackdropEl.removeEventListener('click', onModalBackdropClick);
+    document.removeEventListener('keydown', onEscClick);
 
     const userEmail = emailInputEl.value.trim()
     const userComment = textInputEl.value.trim()
@@ -43,10 +46,6 @@ const onFormSubmit = async event => {
         modalBackdropEl.addEventListener('click', onModalBackdropClick);
         document.addEventListener('keydown', onEscClick);
     } catch (err) {
-        modalCloseBtnEl.removeEventListener('click', onCloseBtnClick);
-        modalBackdropEl.removeEventListener('click', onModalBackdropClick);
-        document.removeEventListener('keydown', onEscClick);
-
         modalTitleEl.classList.add('error-title');
         modalTitleEl.textContent = 'Error!';
         
