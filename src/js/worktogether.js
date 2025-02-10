@@ -46,11 +46,19 @@ const onFormSubmit = async event => {
         modalBackdropEl.addEventListener('click', onModalBackdropClick);
         document.addEventListener('keydown', onEscClick);
     } catch (err) {
+        modalCloseBtnEl.removeEventListener('click', onCloseBtnClick);
+        modalBackdropEl.removeEventListener('click', onModalBackdropClick);
+        document.removeEventListener('keydown', onEscClick);
+
         modalTitleEl.classList.add('error-title');
         modalTitleEl.textContent = 'Error!';
-
+        
         modalTextEl.classList.add('error-text');
         modalTextEl.textContent = 'Sorry something went wrong';
+        
+        modalCloseBtnEl.addEventListener('click', onCloseBtnClick);
+        modalBackdropEl.addEventListener('click', onModalBackdropClick);
+        document.addEventListener('keydown', onEscClick);
 
         bodyEl.classList.add('footer-modal-open');
         modalBackdropEl.classList.add('is-open');
