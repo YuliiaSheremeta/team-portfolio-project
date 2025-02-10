@@ -23,9 +23,6 @@ const isValid = email => {
 //* Function
 const onFormSubmit = async event => {
     event.preventDefault();
-    modalCloseBtnEl.removeEventListener('click', onCloseBtnClick);
-    modalBackdropEl.removeEventListener('click', onModalBackdropClick);
-    document.removeEventListener('keydown', onEscClick);
 
     const userEmail = emailInputEl.value.trim()
     const userComment = textInputEl.value.trim()
