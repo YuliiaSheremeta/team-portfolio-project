@@ -72,9 +72,10 @@
 
 .header-btn:hover,
 .header-btn:focus {
-  background-color: #E0373F;
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
-  transform: translateY(-2px);
+  background-color: #d4232c;
+  border-radius: 25px;
+  transform: scale(1.05);
+  box-shadow: 0px 0px 46px -5px rgba(212, 35, 44, 0.56);
 }
 
 .header-btn:active {
@@ -186,6 +187,11 @@
 .mobile-menu-item {
   text-decoration: underline;
   cursor: pointer;
+}
+
+.mobile-menu-link:hover,
+.mobile-menu-link:focus {
+  color: #ed3b44;
 }
 
 .mobile-menu {
