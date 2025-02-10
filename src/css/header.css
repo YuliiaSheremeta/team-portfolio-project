@@ -1,15 +1,13 @@
 /* ?========mobile=========== */
 
 .header {
-  background-color: transparent;
   position: absolute;
   top: 0px;
   left: 0px;
   right: 0px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0 auto;
+
+
+
 }
 
 .logo-header {
@@ -65,7 +63,7 @@
   gap: 10px;
   margin: 0 auto;
   min-width: 164px;
-  padding: 14px 32px;
+  padding: 18px 24px;
   border: none;
   border-radius: 50px;
   cursor: pointer;
@@ -88,6 +86,7 @@
   display: block;
   position: absolute;
   bottom: 64px;
+  padding: 14px 32px;
 }
 
 .header-btn-mobile {
@@ -98,7 +97,7 @@
   margin-right: 10px;
 }
 
-.title-menu {
+.descr-menu {
   display: none;
   margin-right: 151px;
   margin-left: 151px;
@@ -129,6 +128,7 @@
   align-items: center;
   gap: 18px;
   margin: auto;
+  padding-bottom: 100px;
 }
 
 .mobile-menu-wrapper {
@@ -141,7 +141,7 @@
   z-index: 99999999;
   width: 100%;
   height: 100%;
-  background-image: url('/img/hero/heromob.png');
+  background-image: url('/img/hero/menumob.png');
   background-repeat: no-repeat;
   background-size: cover;
   transform: translateX(100%);
@@ -193,7 +193,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 18px;
+  gap: 8px;
   margin: auto;
 }
 
@@ -233,7 +233,7 @@
   margin-left: 90px;
 }
 
-.title-menu {
+.descr-menu {
   cursor: pointer;
 }
 
@@ -263,14 +263,24 @@
 
   .header-btn {
     display: block;
-    padding-top: 10px;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+
   }
 
-  .title-menu {
+  .descr-menu {
     display: inline-block;
     text-decoration: underline;
     cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #fafafa;
   }
+
+
 
   .header-nav {
     display: flex;
@@ -285,7 +295,7 @@
     max-width: 1440px;
   }
 
-  .title-menu {
+  .descr-menu {
     margin-right: 500px;
     margin-left: 500px;
   }
@@ -296,6 +306,6 @@
 }
 
 .tablet-menu-nav {
-  padding-top: 100px;
+  padding-top: 67px;
   text-align: center;
 }
