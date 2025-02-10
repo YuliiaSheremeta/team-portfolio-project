@@ -14,12 +14,12 @@ import{A as b,S as f,i as y,a as S}from"./assets/vendor-BSKYezAz.js";(function()
               <div class="swiper-buttons">
               <div class="swiper-button-prev">
                 <svg class="swiper-button-icon">
-                  <use href="./img/sprite.svg#icon-swiperrigth"></use>
+                  <use href="img/sprite.svg#icon-swiperrigth"></use>
                 </svg>
               </div>
               <div class="swiper-button-next">
                 <svg class="swiper-button-icon">
-                  <use href="./img/sprite.svg#icon-swiperrigth"></use>
+                  <use href="img/sprite.svg#icon-swiperrigth"></use>
                 </svg>
               </div>
               </div>
