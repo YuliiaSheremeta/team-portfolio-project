@@ -1,6 +1,4 @@
 .covers-container {
-  min-width: 320px;
-  max-width: 100%;
   margin: 0 auto;
   background-color: rgba(217, 217, 217, 0.04);
   backdrop-filter: blur(30px);
@@ -58,18 +56,8 @@
   }
 }
 
-@media (min-width: 375px) {
-  .covers-container {
-    max-width: 375px;
-  }
-}
 @media screen and (min-width: 768px) {
-  .covers-container {
-    max-width: 768px;
-  }
-
   .content {
-    max-width: 768px;
     max-height: 960px;
   }
 
@@ -85,24 +73,5 @@
 
   .marquee__img {
     max-height: 314px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .covers-container {
-    max-width: 1440px;
-  }
-
-  .content {
-    max-width: 1440px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .covers-container {
-    max-width: 1440px;
-  }
-  .content {
-    max-width: 1440px;
   }
 }

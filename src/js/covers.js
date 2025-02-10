@@ -1,17 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
   const coversSection = document.querySelector('.covers-section');
-  const marquees = document.querySelectorAll('.marquee');
+  const marquees = document.querySelectorAll('.marquee__line');
 
   function isElementInViewport(el) {
     const rect = el.getBoundingClientRect();
-    return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <=
-        (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
+    return rect.top < window.innerHeight && rect.bottom > 0;
   }
+
   function checkVisibility() {
     marquees.forEach(marquee => {
       marquee.style.animationPlayState = isElementInViewport(coversSection)
