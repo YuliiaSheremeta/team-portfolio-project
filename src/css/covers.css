@@ -11,8 +11,8 @@
 }
 
 @media screen and (min-resolution: 192dpi) {
-  .covers-section {
-    background-image: url(../img/covers/elemvectors.webp);
+  .covers-container {
+    background-image: url(../img/covers/elemvectors@2x.webp);
   }
 }
 
