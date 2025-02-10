@@ -2,6 +2,7 @@
 import axios from "axios";
 
 //* Find elements
+const bodyEl = document.querySelector('body');
 const formEl = document.querySelector('.footer-form');
 const emailInputEl = document.querySelector('.email-input');
 const textInputEl = document.querySelector('.comment-input');
@@ -22,6 +23,10 @@ const isValid = email => {
 //* Function
 const onFormSubmit = async event => {
     event.preventDefault();
+    modalCloseBtnEl.removeEventListener('click', onCloseBtnClick);
+    modalBackdropEl.removeEventListener('click', onModalBackdropClick);
+    document.removeEventListener('keydown', onEscClick);
+
     const userEmail = emailInputEl.value.trim()
     const userComment = textInputEl.value.trim()
 
@@ -34,31 +39,26 @@ const onFormSubmit = async event => {
         emailInputEl.value = '';
         textInputEl.value = '';
         
+        bodyEl.classList.add('footer-modal-open');
         modalBackdropEl.classList.add('is-open');
-    } catch (err) {
-        console.log(err);
 
+        modalCloseBtnEl.addEventListener('click', onCloseBtnClick);
+        modalBackdropEl.addEventListener('click', onModalBackdropClick);
+        document.addEventListener('keydown', onEscClick);
+    } catch (err) {
         modalTitleEl.classList.add('error-title');
         modalTitleEl.textContent = 'Error!';
 
         modalTextEl.classList.add('error-text');
         modalTextEl.textContent = 'Sorry something went wrong';
 
+        bodyEl.classList.add('footer-modal-open');
         modalBackdropEl.classList.add('is-open');
     }
 }
 
 //* Add event listeners to form
 formEl.addEventListener('submit', onFormSubmit);
-modalCloseBtnEl.addEventListener('click', event => {
-    modalBackdropEl.classList.remove('is-open');
-})
-
-document.addEventListener('keydown', event => {
-    if (event.key === "Escape" || event.keyCode === 27) {
-        modalBackdropEl.classList.remove('is-open');
-    }
-});
 
 emailInputEl.addEventListener('focus', event => {
     footerTitleEl.classList.add('animate-title');
@@ -75,3 +75,23 @@ textInputEl.addEventListener('focus', event => {
 textInputEl.addEventListener('blur', event => {
     footerTitleEl.classList.remove('animate-title');
 })
+
+//* Event functions
+const onCloseBtnClick = event => {
+    modalBackdropEl.classList.remove('is-open');
+    bodyEl.classList.remove('footer-modal-open');
+}
+
+const onModalBackdropClick = event => {
+    if (event.target === modalBackdropEl) {
+        modalBackdropEl.classList.remove('is-open');
+        bodyEl.classList.remove('footer-modal-open');
+    }
+} 
+
+const onEscClick = event => {
+    if (event.key === "Escape" || event.keyCode === 27) {
+        modalBackdropEl.classList.remove('is-open');
+        bodyEl.classList.remove('footer-modal-open');
+    }
+}
