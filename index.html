@@ -16,6 +16,12 @@
       href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="styles.css"
+      media="print"
+      onload="this.media='all'"
+    />
     <script src="https://unpkg.com/accordion-js@3.4.0/dist/accordion.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script type="module" crossorigin src="/team-portfolio-project/index.js"></script>
@@ -159,6 +165,7 @@
             alt="My Foto"
             width="343"
             height="500"
+            loading="lazy"
           />
         </picture>
       </div>
@@ -350,88 +357,130 @@
 </section>
 
       <section class="projects-section section" id="projects-section">
-    <div class="container projects-container">
-        <h2 class="projects-title">Projects</h2>
-        <div class="swiper">
-            <ul class="swiper-wrapper projects-list">
-                <li class="swiper-slide">
-                    <div class="projects-content">
-                    <ul class="projects-tags">
-                        <li class="projects-list-link">#react</li>
-                        <li class="projects-list-link">#js</li>
-                        <li class="projects-list-link">#node js</li>
-                        <li class="projects-list-link">#git</li>
-                    </ul>
-                    <p class="projects-paragraph">Programming Across Borders: Ideas, Technologies, Innovations</p>
-                    <a class="projects-button" href="yuliiasheremeta.github.io/team-portfolio-project/" target="_blank" rel="noopener noreferrer" >
-                        See project
-                    </a>
-                    </div>
-                    <div class="projects-image-wrapper">
-                        <picture>
-                            <source srcset="/team-portfolio-project/assets/projects@3x-C01de1AN.webp 3x, /team-portfolio-project/assets/projects@2x-C-XC271h.webp 2x">
-                            <img class="projects-image" src="/team-portfolio-project/assets/projects-moOyq7Gf.webp" alt="first project">
-                        </picture>
-                    </div>
-                </li>
-                <li class="swiper-slide">
-                    <div class="projects-content">
-                    <ul class="projects-tags">
-                        <li class="projects-list-link">#react</li>
-                        <li class="projects-list-link">#js</li>
-                        <li class="projects-list-link">#node js</li>
-                        <li class="projects-list-link">#git</li>
-                    </ul>
-                    <p class="projects-paragraph">Programming Across Borders: Ideas, Technologies, Innovations</p>
-                    <a class="projects-button" href="yuliiasheremeta.github.io/team-portfolio-project/" target="_blank" rel="noopener noreferrer">
-                        See project
-                    </a>
-                    </div>
-                    <div class="projects-image-wrapper">
-                        <picture>
-                            <source srcset="/team-portfolio-project/assets/project2@3x-Cjt1KFZf.webp 3x, /team-portfolio-project/assets/project2@2x-D9fXH4-K.webp 2x">
-                            <img class="projects-image" src="/team-portfolio-project/assets/project2-CbXunp4S.webp" alt="second project">
-                        </picture>
-                    </div>
-                </li>
-                <li class="swiper-slide">
-                    <div class="projects-content">
-                    <ul class="projects-tags">
-                        <li class="projects-list-link">#react</li>
-                        <li class="projects-list-link">#js</li>
-                        <li class="projects-list-link">#node js</li>
-                        <li class="projects-list-link">#git</li>
-                    </ul>
-                    <p class="projects-paragraph">Programming Across Borders: Ideas, Technologies, Innovations</p>
-                    <a class="projects-button" href="yuliiasheremeta.github.io/team-portfolio-project/" target="_blank"  rel="noopener noreferrer">
-                        See project
-                    </a>
-                    </div>
-                    <div class="projects-image-wrapper">
-                        <picture>
-                            <source srcset="/team-portfolio-project/assets/project3@3x-8U07txlo.webp 3x, /team-portfolio-project/assets/project3@2x-Cdtoubhe.webp 2x">
-                            <img class="projects-image" src="/team-portfolio-project/assets/project3-CM3mQZi-.webp" alt="third project">
-                        </picture>
-                    </div>
-                </li>
+  <div class="container projects-container">
+    <h2 class="projects-title">Projects</h2>
+    <div class="swiper">
+      <ul class="swiper-wrapper projects-list">
+        <li class="swiper-slide">
+          <div class="projects-content">
+            <ul class="projects-tags">
+              <li class="projects-list-link">#react</li>
+              <li class="projects-list-link">#js</li>
+              <li class="projects-list-link">#node js</li>
+              <li class="projects-list-link">#git</li>
             </ul>
+            <p class="projects-paragraph">
+              Programming Across Borders: Ideas, Technologies, Innovations
+            </p>
+            <a
+              class="projects-button"
+              href="yuliiasheremeta.github.io/team-portfolio-project/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              See project
+            </a>
+          </div>
+          <div class="projects-image-wrapper">
+            <picture>
+              <source
+                srcset="/team-portfolio-project/assets/projects@3x-C01de1AN.webp 3x, /team-portfolio-project/assets/projects@2x-C-XC271h.webp 2x"
+              />
+              <img
+                class="projects-image"
+                src="/team-portfolio-project/assets/projects-moOyq7Gf.webp"
+                alt="first project"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+        </li>
+        <li class="swiper-slide">
+          <div class="projects-content">
+            <ul class="projects-tags">
+              <li class="projects-list-link">#react</li>
+              <li class="projects-list-link">#js</li>
+              <li class="projects-list-link">#node js</li>
+              <li class="projects-list-link">#git</li>
+            </ul>
+            <p class="projects-paragraph">
+              Programming Across Borders: Ideas, Technologies, Innovations
+            </p>
+            <a
+              class="projects-button"
+              href="yuliiasheremeta.github.io/team-portfolio-project/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              See project
+            </a>
+          </div>
+          <div class="projects-image-wrapper">
+            <picture>
+              <source
+                srcset="/team-portfolio-project/assets/project2@3x-Cjt1KFZf.webp 3x, /team-portfolio-project/assets/project2@2x-D9fXH4-K.webp 2x"
+              />
+              <img
+                class="projects-image"
+                src="/team-portfolio-project/assets/project2-CbXunp4S.webp"
+                alt="second project"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+        </li>
+        <li class="swiper-slide">
+          <div class="projects-content">
+            <ul class="projects-tags">
+              <li class="projects-list-link">#react</li>
+              <li class="projects-list-link">#js</li>
+              <li class="projects-list-link">#node js</li>
+              <li class="projects-list-link">#git</li>
+            </ul>
+            <p class="projects-paragraph">
+              Programming Across Borders: Ideas, Technologies, Innovations
+            </p>
+            <a
+              class="projects-button"
+              href="yuliiasheremeta.github.io/team-portfolio-project/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              See project
+            </a>
+          </div>
+          <div class="projects-image-wrapper">
+            <picture>
+              <source
+                srcset="/team-portfolio-project/assets/project3@3x-8U07txlo.webp 3x, /team-portfolio-project/assets/project3@2x-Cdtoubhe.webp 2x"
+              />
+              <img
+                class="projects-image"
+                src="/team-portfolio-project/assets/project3-CM3mQZi-.webp"
+                alt="third project"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+        </li>
+      </ul>
 
-            <div class="projects-swiper-buttons">
-                <button class="projects-swiper-button-prev">
-                    <svg class="projects-swiper-left" width="52" height="52">
-                        <use href="/team-portfolio-project/assets/sprite-Ri2QJPrX.svg#icon-swiperrigth"></use>
-                    </svg>
-                </button>
-                <button class="projects-swiper-button-next">
-                    <svg class="projects-swiper-right" width="52" height="52">
-                        <use href="/team-portfolio-project/assets/sprite-Ri2QJPrX.svg#icon-swiperrigth"></use>
-                    </svg>
-                </button>
-            </div>
-        </div>
-
+      <div class="projects-swiper-buttons">
+        <button class="projects-swiper-button-prev">
+          <svg class="projects-swiper-left" width="52" height="52">
+            <use href="/team-portfolio-project/assets/sprite-Ri2QJPrX.svg#icon-swiperrigth"></use>
+          </svg>
+        </button>
+        <button class="projects-swiper-button-next">
+          <svg class="projects-swiper-right" width="52" height="52">
+            <use href="/team-portfolio-project/assets/sprite-Ri2QJPrX.svg#icon-swiperrigth"></use>
+          </svg>
+        </button>
+      </div>
     </div>
+  </div>
 </section>
+
       <section class="section" id="faq-section">
   <div class="container">
     <h2 class="section-faq-title">FAQ</h2>
