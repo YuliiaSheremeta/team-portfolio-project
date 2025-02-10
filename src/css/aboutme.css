@@ -100,17 +100,6 @@
 }
 
 /* Accordion */
-
-.about-me-accordion-container {
-  padding: 0 16px;
-}
-
-@media screen and (min-width: 768px) {
-  .about-me-accordion-container {
-    padding: 0 32px;
-  }
-}
-
 .about-me-accordion-container .ac .ac-panel {
   overflow: hidden;
   transition-property: height, visibility;
@@ -173,17 +162,17 @@
   }
 }
 .about-me-accordion-container .ac-accent-about-me {
-  padding-bottom: 32px;
+  margin-bottom: 32px;
 }
 
 @media screen and (min-width: 768px) {
   .about-me-accordion-container .ac-accent-about-me {
-    padding-bottom: 16px;
+    margin-bottom: 16px;
   }
 }
 @media screen and (min-width: 1440px) {
   .about-me-accordion-container .ac-accent-about-me {
-    padding-bottom: 32px;
+    margin-bottom: 32px;
   }
 }
 .about-me-accordion-container .about-me-svgbutton-arrow {
@@ -256,7 +245,7 @@
 .about-me-swipper-div .about-swiper-button-next {
   position: absolute;
   top: 50%;
-  right: 16px;
+  right: 0;
   transform: translateY(-50%);
   z-index: 10;
   width: 40px;
@@ -268,15 +257,9 @@
   cursor: pointer;
 }
 
-@media screen and (min-width: 768px) {
-  .about-me-swipper-div .about-swiper-button-next {
-    right: 32px;
-  }
-}
-
 @media screen and (min-width: 1440px) {
   .about-me-swipper-div .about-swiper-button-next {
-    right: 64px;
+    right: 32px;
   }
 }
 
@@ -288,20 +271,18 @@
   position: relative;
   padding: 0;
   margin-top: 32px;
-  padding: 0 16px;
 }
 
 @media screen and (min-width: 768px) {
   .about-me-swipper-div {
     margin-top: 64px;
-    padding: 0 32px;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .about-me-swipper-div {
     margin-top: 96px;
-    padding: 0 64px;
+    padding: 0 32px;
   }
 }
 
