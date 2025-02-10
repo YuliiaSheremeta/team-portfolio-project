@@ -1,13 +1,10 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
-// import Swiper from 'swiper';
-// import { Navigation, Keyboard } from 'swiper/modules';
-
 import Swiper from 'swiper/bundle';
 import 'swiper/swiper-bundle.css';
 
-import pathSprite from "../img/sprite.svg";
+import pathSprite from '../img/sprite.svg';
 
 document.addEventListener('DOMContentLoaded', () => {
   const swiperContainer = document.querySelector('.reviews-swiper-container');
@@ -52,7 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
                   )
                   .join('')}
               </div>
-              <!-- Кнопки навігації -->
               <div class="swiper-buttons">
               <div class="swiper-button-prev">
                 <svg class="swiper-button-icon">
@@ -76,11 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
           enabled: true,
         },
         slidesPerView: 1,
-        spaceBetween: 10,
-        // breakpoints: {
-        //   768: { slidesPerView: 2 },
-        //   1440: { slidesPerView: 4 },
-        // },
+        spaceBetween: 16,
       });
 
       function updateSwiper() {
