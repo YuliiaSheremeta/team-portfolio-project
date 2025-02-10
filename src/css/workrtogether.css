@@ -20,11 +20,15 @@
 }
 
 @media screen and (min-width: 768px) {
+    .page-footer{
+        padding-top: 80px;
+        padding-bottom: 169px;
+    }
+
     .container-footer {
         max-width: 768px;
         padding-left: 32px;
         padding-right: 32px;
-        padding-top: 80px;
 
         background-position: top 0 left 570px;
     }
@@ -90,6 +94,7 @@ html{
 .footer-title::before {
     content: "";
     display: block;
+    cursor: pointer;
 
     width: 44px;
     height: 44px;
@@ -103,10 +108,16 @@ html{
     transition: transform 250ms linear, box-shadow 250ms linear;
 }
 
+@media screen and (min-resolution:192dpi) {
+    .footer-title::before{
+        background-image: url('../img/header/fotoheader@2x.webp');
+    }
+}
+
 .footer-title:hover::before{
     transform: rotateX(10deg) rotateY(10deg) rotateZ(-5deg) scale(1.1);
     box-shadow: 3px 3px 0px #969696,
-            -3px -3px 0px #ffffff;
+            -3px -3px 0px #ffffff; 
 }
 
 .animate-title{
@@ -352,6 +363,10 @@ html{
 /* ================================ /Contact list styles ================================ */
 
 /* ================================ Modal ================================ */
+body.footer-modal-open {
+    overflow: hidden;
+}
+
 .backdrop {
     display: flex;
     justify-content: center;

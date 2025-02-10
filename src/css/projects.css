@@ -1,7 +1,9 @@
-.projects-container {
-  padding-left: 16px;
-  padding-right: 16px;
+.projects-container .projects-content { 
+    padding-left: 32px;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
+
 
 .projects-container .projects-title {
   font-weight: 600;
@@ -15,6 +17,7 @@
 
 .projects-container .swiper-wrapper {
   display: flex;
+  margin-bottom: 32px;
 }
 
 .projects-container .swiper-slide {
@@ -33,8 +36,6 @@
   gap: 6px;
   width: 279px;
   height: 96px;
-  margin-top: 32px;
-  margin-left: 32px;
   margin-bottom: 96px;
 }
 
@@ -61,7 +62,6 @@
   letter-spacing: -0.03em;
   color: #1c1d20;
   margin-bottom: 32px;
-  margin-left: 32px;
   width: 279px;
   height: 84px;
 }
@@ -82,8 +82,6 @@
   font-size: 16px;
   letter-spacing: -0.02em;
   color: #fafafa;
-  margin-bottom: 32px;
-  margin-left: 32px;
 }
 
 .projects-container .projects-button:hover {
@@ -141,10 +139,15 @@
 }
 
 @media screen and (min-width: 768px) {
-  .projects-container {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
+.projects-container .projects-content {
+        padding-left: 64px;
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+
+.projects-container .swiper-wrapper { 
+    margin-bottom: 64px;
+}
 
   .projects-container .swiper-slide {
     width: 704px;
@@ -156,13 +159,9 @@
     height: 55px;
     flex-wrap: nowrap;
     margin-bottom: 164px;
-    margin-left: 64px;
-    margin-top: 64px;
   }
 
   .projects-container .projects-paragraph {
-    margin-bottom: 32px;
-    margin-left: 64px;
     font-weight: 500;
     font-size: 44px;
     line-height: 1;
@@ -176,10 +175,7 @@
     gap: 20px;
   }
 
-  .projects-container .projects-button {
-    margin-left: 64px;
-    margin-bottom: 64px;
-  }
+  
 
   .projects-container .projects-image-wrapper {
     width: 100%;
