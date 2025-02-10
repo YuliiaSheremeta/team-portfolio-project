@@ -8,8 +8,6 @@
   justify-content: flex-start;
   font-family: 'InterTight-SemiBold', sans-serif;
   letter-spacing: -0.02em;
-  padding-left: 16px;
-  padding-right: 16px;
 }
 
 .benefits-title {
@@ -105,25 +103,20 @@
 }
 
 .reference-order-the-project {
+  display: block;
   border-radius: 60px;
   border-style: solid;
   border-color: rgba(250, 250, 250, 0.2);
   border-width: 1px;
   padding: 18px 36px;
+  color: #fafafa;
+  text-align: left;
+  font-family: 'InterTight-Medium', sans-serif;
 }
 
 .reference-order-the-project:hover {
   transform: translateY(-2px);
-}
-
-.reference-order-the-project:hover a {
   color: rgba(250, 250, 250, 0.8);
-}
-
-.go-to-order-the-project {
-  color: #fafafa;
-  text-align: left;
-  font-family: 'InterTight-Medium', sans-serif;
 }
 
 /* Styles for Tablet */
@@ -132,10 +125,6 @@
   .section-benefits-content {
     gap: 64px;
     width: 704px;
-  }
-  .benefits {
-    padding-left: 32px;
-    padding-right: 32px;
   }
 
   .list-benefits {
