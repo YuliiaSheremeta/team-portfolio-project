@@ -7,6 +7,8 @@ import 'izitoast/dist/css/iziToast.min.css';
 import Swiper from 'swiper/bundle';
 import 'swiper/swiper-bundle.css';
 
+import pathSprite from "../img/sprite.svg";
+
 document.addEventListener('DOMContentLoaded', () => {
   const swiperContainer = document.querySelector('.reviews-swiper-container');
 
@@ -54,12 +56,12 @@ document.addEventListener('DOMContentLoaded', () => {
               <div class="swiper-buttons">
               <div class="swiper-button-prev">
                 <svg class="swiper-button-icon">
-                  <use href="img/sprite.svg#icon-swiperrigth"></use>
+                  <use href="${pathSprite}#icon-swiperrigth"></use>
                 </svg>
               </div>
               <div class="swiper-button-next">
                 <svg class="swiper-button-icon">
-                  <use href="img/sprite.svg#icon-swiperrigth"></use>
+                  <use href="${pathSprite}#icon-swiperrigth"></use>
                 </svg>
               </div>
               </div>
