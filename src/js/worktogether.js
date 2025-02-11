@@ -84,6 +84,7 @@ textInputEl.addEventListener('blur', event => {
 
 //* Event functions
 const onCloseBtnClick = event => {
+
   modalBackdropEl.classList.remove('is-open');
   enableScroll();
 };
@@ -101,7 +102,33 @@ const onEscClick = event => {
     enableScroll();
   }
 };
+=======
+    modalBackdropEl.classList.remove('is-open');
+    modalCloseBtnEl.removeEventListener('click', onCloseBtnClick);
+    modalBackdropEl.removeEventListener('click', onModalBackdropClick);
+    document.removeEventListener('keydown', onEscClick);
+    enableScroll()
+}
 
+const onModalBackdropClick = event => {
+    if (event.target === modalBackdropEl) {
+        modalBackdropEl.classList.remove('is-open');
+        modalCloseBtnEl.removeEventListener('click', onCloseBtnClick);
+        modalBackdropEl.removeEventListener('click', onModalBackdropClick);
+        document.removeEventListener('keydown', onEscClick);
+        enableScroll()
+    }
+} 
+
+const onEscClick = event => {
+    if (event.key === "Escape" || event.keyCode === 27) {
+        modalBackdropEl.classList.remove('is-open');
+        modalCloseBtnEl.removeEventListener('click', onCloseBtnClick);
+        modalBackdropEl.removeEventListener('click', onModalBackdropClick);
+        document.removeEventListener('keydown', onEscClick);
+        enableScroll()
+    }
+}
 function disableScroll() {
   const scrollY = window.scrollY;
   document.body.style.position = 'fixed';
