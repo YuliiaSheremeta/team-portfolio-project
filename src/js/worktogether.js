@@ -1,5 +1,5 @@
 //* Import libraries
-import axios from "axios";
+import axios from 'axios';
 
 //* Find elements
 const bodyEl = document.querySelector('body');
@@ -16,86 +16,89 @@ const modalTextEl = document.querySelector('.modal-text');
 
 //* Validate function
 const isValid = email => {
-    const pattern = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
-    return pattern.test(email);
-} 
+  const pattern = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+  return pattern.test(email);
+};
 
 //* Function
 const onFormSubmit = async event => {
-    event.preventDefault();
-    modalCloseBtnEl.removeEventListener('click', onCloseBtnClick);
-    modalBackdropEl.removeEventListener('click', onModalBackdropClick);
-    document.removeEventListener('keydown', onEscClick);
+  event.preventDefault();
+  modalCloseBtnEl.removeEventListener('click', onCloseBtnClick);
+  modalBackdropEl.removeEventListener('click', onModalBackdropClick);
+  document.removeEventListener('keydown', onEscClick);
 
-    const userEmail = emailInputEl.value.trim()
-    const userComment = textInputEl.value.trim()
+  const userEmail = emailInputEl.value.trim();
+  const userComment = textInputEl.value.trim();
 
-    try {
-        const postRequest = await axios.post('https://portfolio-js.b.goit.study/api/requests', {
-            "email": `${userEmail}`,
-            "comment": `${userComment}`
-        })
+  try {
+    const postRequest = await axios.post(
+      'https://portfolio-js.b.goit.study/api/requests',
+      {
+        email: `${userEmail}`,
+        comment: `${userComment}`,
+      }
+    );
 
-        emailInputEl.value = '';
-        textInputEl.value = '';
-        
-        bodyEl.classList.add('footer-modal-open');
-        modalBackdropEl.classList.add('is-open');
+    emailInputEl.value = '';
+    textInputEl.value = '';
 
-        modalCloseBtnEl.addEventListener('click', onCloseBtnClick);
-        modalBackdropEl.addEventListener('click', onModalBackdropClick);
-        document.addEventListener('keydown', onEscClick);
-    } catch (err) {
-        modalTitleEl.classList.add('error-title');
-        modalTitleEl.textContent = 'Error!';
-        
-        modalTextEl.classList.add('error-text');
-        modalTextEl.textContent = 'Sorry something went wrong';
-        
-        modalCloseBtnEl.addEventListener('click', onCloseBtnClick);
-        modalBackdropEl.addEventListener('click', onModalBackdropClick);
-        document.addEventListener('keydown', onEscClick);
+    bodyEl.classList.add('footer-modal-open');
+    modalBackdropEl.classList.add('is-open');
 
-        bodyEl.classList.add('footer-modal-open');
-        modalBackdropEl.classList.add('is-open');
-    }
-}
+    modalCloseBtnEl.addEventListener('click', onCloseBtnClick);
+    modalBackdropEl.addEventListener('click', onModalBackdropClick);
+    document.addEventListener('keydown', onEscClick);
+  } catch (err) {
+    modalTitleEl.classList.add('error-title');
+    modalTitleEl.textContent = 'Error!';
+
+    modalTextEl.classList.add('error-text');
+    modalTextEl.textContent = 'Sorry something went wrong';
+
+    modalCloseBtnEl.addEventListener('click', onCloseBtnClick);
+    modalBackdropEl.addEventListener('click', onModalBackdropClick);
+    document.addEventListener('keydown', onEscClick);
+
+    bodyEl.classList.add('footer-modal-open');
+    modalBackdropEl.classList.add('is-open');
+  }
+};
 
 //* Add event listeners to form
 formEl.addEventListener('submit', onFormSubmit);
 
 emailInputEl.addEventListener('focus', event => {
-    footerTitleEl.classList.add('animate-title');
-})
+  footerTitleEl.classList.add('animate-title');
+});
 
 emailInputEl.addEventListener('blur', event => {
-    footerTitleEl.classList.remove('animate-title');
-})
+  footerTitleEl.classList.remove('animate-title');
+});
 
 textInputEl.addEventListener('focus', event => {
-    footerTitleEl.classList.add('animate-title');
-})
+  footerTitleEl.classList.add('animate-title');
+});
 
 textInputEl.addEventListener('blur', event => {
-    footerTitleEl.classList.remove('animate-title');
-})
+  footerTitleEl.classList.remove('animate-title');
+});
 
 //* Event functions
 const onCloseBtnClick = event => {
-    modalBackdropEl.classList.remove('is-open');
-    bodyEl.classList.remove('footer-modal-open');
-}
+  modalBackdropEl.classList.remove('is-open');
+  bodyEl.classList.remove('footer-modal-open');
+};
 
 const onModalBackdropClick = event => {
-    if (event.target === modalBackdropEl) {
-        modalBackdropEl.classList.remove('is-open');
-        bodyEl.classList.remove('footer-modal-open');
-    }
-} 
+  if (event.target === modalBackdropEl) {
+    modalBackdropEl.classList.remove('is-open');
+    bodyEl.classList.remove('footer-modal-open');
+  }
+};
 
 const onEscClick = event => {
-    if (event.key === "Escape" || event.keyCode === 27) {
-        modalBackdropEl.classList.remove('is-open');
-        bodyEl.classList.remove('footer-modal-open');
-    }
-}
+  if (event.key === 'Escape' || event.keyCode === 27) {
+    modalBackdropEl.classList.remove('is-open');
+    bodyEl.classList.remove('footer-modal-open');
+  }
+};
