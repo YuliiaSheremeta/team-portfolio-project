@@ -39,7 +39,7 @@ const onFormSubmit = async event => {
         emailInputEl.value = '';
         textInputEl.value = '';
         
-        bodyEl.classList.add('footer-modal-open');
+        disableScroll()
         modalBackdropEl.classList.add('is-open');
 
         modalCloseBtnEl.addEventListener('click', onCloseBtnClick);
@@ -56,7 +56,6 @@ const onFormSubmit = async event => {
         modalBackdropEl.addEventListener('click', onModalBackdropClick);
         document.addEventListener('keydown', onEscClick);
 
-        bodyEl.classList.add('footer-modal-open');
         modalBackdropEl.classList.add('is-open');
     }
 }
@@ -83,19 +82,35 @@ textInputEl.addEventListener('blur', event => {
 //* Event functions
 const onCloseBtnClick = event => {
     modalBackdropEl.classList.remove('is-open');
-    bodyEl.classList.remove('footer-modal-open');
+    enableScroll()
 }
 
 const onModalBackdropClick = event => {
     if (event.target === modalBackdropEl) {
         modalBackdropEl.classList.remove('is-open');
-        bodyEl.classList.remove('footer-modal-open');
+        enableScroll()
     }
 } 
 
 const onEscClick = event => {
     if (event.key === "Escape" || event.keyCode === 27) {
         modalBackdropEl.classList.remove('is-open');
-        bodyEl.classList.remove('footer-modal-open');
+        enableScroll()
     }
+}
+
+function disableScroll() {
+    const scrollY = window.scrollY;
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollY}px`;
+}
+
+function enableScroll() {
+    const scrollY = Math.abs(parseInt(document.body.style.top || '0', 10));
+    document.body.style.position = '';
+    document.body.style.top = '';
+    
+    document.documentElement.classList.add('disable-scroll-animation');
+    window.scrollTo(0, scrollY);
+    document.documentElement.classList.remove('disable-scroll-animation');
 }

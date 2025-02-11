@@ -10,12 +10,27 @@ if (burgerButton && closeButton && mobileMenuWrapper) {
   document.addEventListener('keydown', handleKeydown);
 }
 
+function disableScroll() {
+  const scrollY = window.scrollY;
+  document.body.style.position = 'fixed';
+  document.body.style.top = `-${scrollY}px`;
+}
+
+function enableScroll() {
+  const scrollY = Math.abs(parseInt(document.body.style.top || '0', 10));
+  document.body.style.position = '';
+  document.body.style.top = '';
+  window.scrollTo(0, scrollY);
+}
+
 function toggleMobileMenu(e) {
   e.stopPropagation();
   if (mobileMenuWrapper.classList.contains('is-open')) {
     mobileMenuWrapper.classList.remove('is-open');
+    enableScroll();
   } else {
     mobileMenuWrapper.classList.add('is-open');
+    disableScroll();
   }
 }
 function handleKeydown(e) {
@@ -27,7 +42,7 @@ function handleKeydown(e) {
   }
 }
 
-const menuTitle = document.querySelector('.title-menu');
+const menuTitle = document.querySelector('.descr-menu');
 const menuWrapper = document.querySelector('.tablet-menu-wrapper');
 
 function toggleMenu(e) {
