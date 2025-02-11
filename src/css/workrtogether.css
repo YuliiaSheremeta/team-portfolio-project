@@ -6,7 +6,7 @@
     padding-right: 16px;
     margin: 0 auto;
 
-    background-image: url('../img/worktogether/worktogether.png');
+    background-image: url('../img/worktogether/worktogether.webp');
     background-repeat: no-repeat;
     background-position: top 0 left 290px;
 }
@@ -18,7 +18,7 @@
 
 @media screen and (min-resolution:192dpi){
     .container-footer {
-        background-image: url('../img/worktogether/worktogether@2x.png');
+        background-image: url('../img/worktogether/worktogether@2x.webp');
     }
 }
 
