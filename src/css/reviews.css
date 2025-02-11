@@ -77,9 +77,9 @@
   align-items: center;
   align-content: center;
   gap: 12px;
-  margin-top: 20px;
   width: 156px;
   height: 68px;
+  --swiper-navigation-size: 0;
 }
 
 .reviews .swiper-button-prev,
