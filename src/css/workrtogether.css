@@ -483,4 +483,8 @@ html{
 .error-text {
     font-size: 25px;
 }
+
+.disable-scroll-animation{
+    scroll-behavior: initial;
+}
 /* ================================ /Modal ================================ */

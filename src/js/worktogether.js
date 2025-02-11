@@ -40,7 +40,6 @@ const onFormSubmit = async event => {
         textInputEl.value = '';
         
         disableScroll()
-        bodyEl.classList.add('footer-modal-open');
         modalBackdropEl.classList.add('is-open');
 
         modalCloseBtnEl.addEventListener('click', onCloseBtnClick);
@@ -57,7 +56,6 @@ const onFormSubmit = async event => {
         modalBackdropEl.addEventListener('click', onModalBackdropClick);
         document.addEventListener('keydown', onEscClick);
 
-        bodyEl.classList.add('footer-modal-open');
         modalBackdropEl.classList.add('is-open');
     }
 }
@@ -111,5 +109,8 @@ function enableScroll() {
     const scrollY = Math.abs(parseInt(document.body.style.top || '0', 10));
     document.body.style.position = '';
     document.body.style.top = '';
+    
+    document.documentElement.classList.add('disable-scroll-animation');
     window.scrollTo(0, scrollY);
+    document.documentElement.classList.remove('disable-scroll-animation');
 }
