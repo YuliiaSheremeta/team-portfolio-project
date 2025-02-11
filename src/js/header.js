@@ -5,8 +5,6 @@ const mobileMenuContainer = document.querySelector('.mobile-menu-container');
 
 if (burgerButton && closeButton && mobileMenuWrapper) {
   burgerButton.addEventListener('click', toggleMobileMenu);
-  closeButton.addEventListener('click', toggleMobileMenu);
-  mobileMenuContainer.addEventListener('click', toggleMobileMenu);
   document.addEventListener('keydown', handleKeydown);
 }
 
@@ -27,9 +25,13 @@ function toggleMobileMenu(e) {
   e.stopPropagation();
   if (mobileMenuWrapper.classList.contains('is-open')) {
     mobileMenuWrapper.classList.remove('is-open');
+    closeButton.removeEventListener('click', toggleMobileMenu);
+    mobileMenuContainer.removeEventListener('click', toggleMobileMenu);
     enableScroll();
   } else {
     mobileMenuWrapper.classList.add('is-open');
+    closeButton.addEventListener('click', toggleMobileMenu);
+    mobileMenuContainer.addEventListener('click', toggleMobileMenu);
     disableScroll();
   }
 }
