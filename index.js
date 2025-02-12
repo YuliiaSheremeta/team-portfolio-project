@@ -3,7 +3,7 @@ import{A as E,S as b,i as B,a as P,b as O}from"./assets/vendor-DG4Pl4LQ.js";(fun
               <div class='swiper-wrapper'>
                 ${i.map(n=>`
                   <div class='swiper-slide'>
-                    <img src='${n.avatar_url}' alt='${n.author}'>
+                    <img src='${n.avatar_url}' alt='${n.author}' loading="lazy">
                     <div class='swiper-slide-review'>
                     <h3>${n.author}</h3>
                     <p>${n.review}</p>
