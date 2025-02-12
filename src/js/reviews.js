@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
                   .map(
                     review => `
                   <div class='swiper-slide'>
-                    <img src='${review.avatar_url}' alt='${review.author}'>
+                    <img src='${review.avatar_url}' alt='${review.author}' loading="lazy">
                     <div class='swiper-slide-review'>
                     <h3>${review.author}</h3>
                     <p>${review.review}</p>
