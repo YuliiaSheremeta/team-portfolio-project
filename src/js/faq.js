@@ -1,3 +1,5 @@
+import Accordion from 'accordion-js';
+
 document.addEventListener("DOMContentLoaded", function () {
     new Accordion("#accordion-faq-left", {
         duration: 400,

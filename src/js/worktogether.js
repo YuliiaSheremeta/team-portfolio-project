@@ -126,3 +126,4 @@ function enableScroll() {
   window.scrollTo(0, scrollY);
   document.documentElement.classList.remove('disable-scroll-animation');
 }
+
