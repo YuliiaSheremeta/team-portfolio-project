@@ -6,7 +6,7 @@
     padding-right: 16px;
     margin: 0 auto;
 
-    background-image: url('../img/worktogether/worktogether.webp');
+    background-image: url('/img/worktogether/footer.png');
     background-repeat: no-repeat;
     background-position: top 0 left 290px;
 }
@@ -18,7 +18,7 @@
 
 @media screen and (min-resolution:192dpi){
     .container-footer {
-        background-image: url('../img/worktogether/worktogether@2x.webp');
+        background-image: url('/img/worktogether/footer@2x.png');
     }
 }
 
@@ -108,7 +108,7 @@ html{
     height: 44px;
 
     border-radius: 15px;
-    background-image: url('../img/header/fotoheader.webp');
+    background-image: url('/img/header/fotoheader.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -118,7 +118,7 @@ html{
 
 @media screen and (min-resolution:192dpi) {
     .footer-title::before{
-        background-image: url('../img/header/fotoheader@2x.webp');
+        background-image: url('/img/header/fotoheader@2x.webp');
     }
 }
 
@@ -139,7 +139,7 @@ html{
 
 @media screen and (min-resolution:192dpi){
     .footer-title::before{
-        background-image: url('../img/header/fotoheader@2x.webp');
+        background-image: url('/img/header/fotoheader@2x.webp');
     }
 }
 
