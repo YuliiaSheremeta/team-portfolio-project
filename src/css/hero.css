@@ -64,8 +64,8 @@
 .hero-section {
   max-width: 100%;
   background-image: url('/img/hero/Heromobile.png');
-  background-size: 375px 812px;
-  background-repeat: no-repeat;
+  background-size: contain;
+  background-repeat: repeat;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   padding-top: 169px;
   padding-bottom: 32px;
@@ -212,7 +212,7 @@
   .hero-section {
     padding-top: 300px;
     background-image: url('/img/hero/Herotablet.png');
-    background-size: cover;
+    background-size: contain;
   }
 
 
